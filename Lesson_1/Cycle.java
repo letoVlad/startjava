@@ -6,7 +6,7 @@ public class Cycle {
         }
 
         int k = 6;
-        while(k != -8) {
+        while (k != -8) {
             System.out.println(k);
             k -= 2;
         }
@@ -18,7 +18,7 @@ public class Cycle {
                 sum = number + sum;
             }
             number++;
-        } while(number != 20);
+        } while (number != 20);
         System.out.println(sum);
     }
 }
