@@ -12,6 +12,7 @@ public class ConditionalStatement  {
         if(isMaleSex) {
             System.out.println("Я все ещё мужчина");
         }
+		
 
         if(isMaleSex != false) {
             System.out.println("Я уже не мужчина");
