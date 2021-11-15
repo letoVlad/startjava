@@ -5,20 +5,20 @@ public class Cycle {
             System.out.println(i);
         }
 
-        int k = 6;
-        while (k != -8) {
-            System.out.println(k);
-            k -= 2;
+        int counter = 6;
+        while (counter >= -6) {
+            System.out.println(counter);
+            counter -= 2;
         }
 
-        int sum = 0;
-        int number = 10;
+        int sumOdd = 0;
+        counter = 10; 
         do {
-            if (number % 2 != 0) {
-                sum = number + sum;
+            if (counter % 2 != 0) {
+                sumOdd += counter;
             }
-            number++;
-        } while (number != 20);
-        System.out.println(sum);
+            counter++;
+        } while (20 >= counter);
+        System.out.println(sumOdd);
     }
 }
