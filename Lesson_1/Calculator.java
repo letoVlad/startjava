@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class calculator { 
+
+public class Calculator { 
 
     public static void main(String[] agrs) {
         Scanner scanner = new Scanner(System.in);
@@ -8,23 +9,23 @@ public class calculator {
         System.out.println("Enter the second number:");
         int numberTwo = scanner.nextInt();
         System.out.println("Enter math operation (+, -, *, /, ^, %)");
-        String matOper = scanner.next();
+        String sign = scanner.next();
         
-        if (matOper.equals("+")) {
+        if (sign.equals("+")) {
             System.out.println(numberOne + numberTwo);
-        } else if (matOper.equals("-")) {
+        } else if (sign.equals("-")) {
             System.out.println(numberOne - numberTwo);
-        } else if (matOper.equals("*")) {
+        } else if (sign.equals("*")) {
             System.out.println(numberOne - numberTwo);
-        } else if (matOper.equals("/")) {
+        } else if (sign.equals("/")) {
             System.out.println(numberOne / numberTwo);
-        } else if (matOper.equals("^")) {
+        } else if (sign.equals("^")) {
             int result = numberOne;
             for (int i = 1; i < numberTwo; i++) {
                 result *= numberOne;
             }
             System.out.println(result);
-        } else if (matOper.equals("%")) {
+        } else if (sign.equals("%")) {
             System.out.println(numberOne % numberTwo);
         }
     }
