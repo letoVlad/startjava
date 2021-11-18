@@ -1,23 +1,23 @@
 public class MyFirstGame { 
 
     public static void main(String[] agrs) {
-        int minNumber = 0;
-        int maxNumber = 100;
-        int key = 27;
-        int mid = 0;
+        int startRate = 0;
+        int endRate = 100;
+        int hiddenNumberComp = 27;
+        int hiddenNumberUser = 0;
 
-        while (minNumber <= maxNumber) {
-            mid = (minNumber + maxNumber) / 2;
-            if (mid == key) {
-                System.out.println(mid + " Поздравляю, число угадано!");
+        while (startRate <= endRate) {
+            hiddenNumberUser = (startRate + endRate) / 2;
+            if (hiddenNumberUser == hiddenNumberComp) {                
                 break;
-            } else if (mid < key) {
-                minNumber = mid + 1;
-                System.out.println(mid + " Данное число меньше того, что загадал компьютер");
-            } else if (mid > key) {
-                maxNumber = mid - 1;
-                System.out.println(mid + " Данное число больше того, что загадал компьютер");
+            } else if (hiddenNumberUser < hiddenNumberComp) {
+                startRate = hiddenNumberUser + 1;
+                System.out.println(hiddenNumberUser + " Данное число меньше того, что загадал компьютер");
+            } else if (hiddenNumberUser > hiddenNumberComp) {
+                endRate = hiddenNumberUser - 1;
+                System.out.println(hiddenNumberUser + " Данное число больше того, что загадал компьютер");
             }
         }
+		System.out.println(hiddenNumberUser + " Поздравляю, число угадано!");
     }
 }
