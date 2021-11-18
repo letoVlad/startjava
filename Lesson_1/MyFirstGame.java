@@ -18,6 +18,6 @@ public class MyFirstGame {
                 System.out.println(hiddenNumberUser + " Данное число больше того, что загадал компьютер");
             }
         }
-		System.out.println(hiddenNumberUser + " Поздравляю, число угадано!");
+	System.out.println(hiddenNumberUser + " Поздравляю, число угадано!");
     }
 }
