@@ -31,5 +31,6 @@ public class ConditionalStatement  {
         } else {
             System.out.println("имя c неизвестной буквой");
         }
+		1
     }
 }
