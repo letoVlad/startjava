@@ -6,18 +6,18 @@ public class MyFirstGame {
         int hiddenNumberComp = 27;
         int hiddenNumber = 0;
 
-        while (true) {
+        while (hiddenNumber != hiddenNumberComp) {
             hiddenNumber = (startRate + endRate) / 2;
             if (hiddenNumber == hiddenNumberComp) {                
                 break;
             } else if (hiddenNumber < hiddenNumberComp) {
                 startRate = hiddenNumber;
-                System.out.println(hiddenNumberUser + " Данное число меньше того, что загадал компьютер");
+                System.out.println(hiddenNumber + " Данное число меньше того, что загадал компьютер");
             } else if (hiddenNumber > hiddenNumberComp) {
-                endRate = hiddenNumberUser;
+                endRate = hiddenNumber;
                 System.out.println(hiddenNumber + " Данное число больше того, что загадал компьютер");
             }
         }
-	System.out.println(hiddenNumber + " Поздравляю, число угадано!");
+		System.out.println(hiddenNumber + " Поздравляю, число угадано!");
     }
 }
