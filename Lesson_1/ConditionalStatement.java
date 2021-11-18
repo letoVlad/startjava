@@ -11,7 +11,7 @@ public class ConditionalStatement  {
             System.out.println("Я все ещё мужчина");
         }
 		
-		isMale = false;
+	isMale = false;
         if(!isMale) {
             System.out.println("Я уже не мужчина");
         }
