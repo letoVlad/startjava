@@ -7,10 +7,10 @@ public class Person {
     int age = 33;
 
     void run() {
-        System.out.println(name + "Ran");
+        System.out.println(name + "Run");
     }
 
-    boolean sleep() {
+    boolean isSleep() {
         return true;
     }
 
@@ -18,7 +18,7 @@ public class Person {
         return "My name is Mark";
     }
 
-    void sit(){
+    void sit() {
 
     }
 }
