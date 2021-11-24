@@ -70,3 +70,4 @@ public class Wolf {
         System.out.println(alias + " выслеживает добычу");
     }
 }
+
