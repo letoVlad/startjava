@@ -1,14 +1,10 @@
 import java.util.Scanner;
 
 public class Calculator {
-    public void countingMachine() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите первое число:");
-        int numberOne = scanner.nextInt();
-        System.out.println("Введите знак математической операции:");
-        char sign = scanner.next().charAt(0);
-        System.out.println("Введите второе число:");
-        int numberTwo = scanner.nextInt();
+    int numberOne = 0;
+    int numberTwo = 0;
+    char sign = 0;
+    public void calculate() {
         switch (sign) {
             case '+':
                 System.out.println(numberOne + numberTwo);
