@@ -1,9 +1,9 @@
 public class Jager {
-    private String modelName = "";
-    private String origin = "";
-    private int height = 0;
-    private int speed = 0;
-    private int armor = 0;
+    private String modelName;
+    private String origin;
+    private int height;
+    private int speed;
+    private int armor;
 
     public String getModelName() {
         return modelName;
