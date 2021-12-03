@@ -4,17 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    Player playerOne;
-    Player playerTwo;
-    public void setPlayerOne(Player playerOne) {
-        this.playerOne = playerOne;
-    }
-
-    public void setPlayerTwo(Player playerTwo) {
-        this.playerTwo = playerTwo;
-    }
-
-    public void GuessNumberOne() {
+    public void ProgressGame(Player playerOne, Player playerTwo) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int hiddenNumberComp = random.nextInt(100) + 1;
