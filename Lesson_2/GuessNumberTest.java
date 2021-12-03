@@ -18,7 +18,7 @@ public class GuessNumberTest {
             test.GuessNumberOne();
             answer = "";
             while (!answer.equals("yes") && !answer.equals("no")) {
-                System.out.println("Хотите продолжить вычисления? [yes/no]");
+                System.out.println("Хотите продолжить игру? [yes/no]");
                 answer = scanner.nextLine();
             }
         }
