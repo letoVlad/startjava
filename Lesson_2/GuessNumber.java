@@ -44,10 +44,3 @@ public class GuessNumber {
         } while (playerOne.getHiddenNumberUser() != hiddenNumberComp || playerTwo.getHiddenNumberUser() != hiddenNumberComp);
     }
 }
-
-
-
-
-
-
-
