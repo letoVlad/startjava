@@ -1,44 +1,47 @@
-package com.company;
-
 import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    public void ProgressGame(Player playerOne, Player playerTwo) {
+    Player playerOne;
+    Player playerTwo;
+
+    public GuessNumber(Player playerOne, Player playerTwo) {
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
+    }
+
+    public void start() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int hiddenNumberComp = random.nextInt(100) + 1;
         System.out.println("Подсказка: Число компьютера = " + hiddenNumberComp);
-        while ((playerOne.getHiddenNumberUser() != hiddenNumberComp || playerTwo.getHiddenNumberUser() != hiddenNumberComp)) {
-            while (playerTwo.getHiddenNumberUser() != hiddenNumberComp) {
-                System.out.println("Введите цифры");
-                playerOne.setHiddenNumberUser(scanner.nextInt());
-                if (playerOne.getHiddenNumberUser() > hiddenNumberComp) {
-                    System.out.println("Данное число больше того, что загадал компьютер. Ходит игрок " + playerTwo.getNamePlayer());
-                    break;
-                } else if (playerOne.getHiddenNumberUser() < hiddenNumberComp) {
-                    System.out.println("Данное число меньше того, что загадал компьютер. Ходит игрок " + playerTwo.getNamePlayer());
-                    break;
-                } else {
-                    System.out.println(" Поздравляю, число угадано Игроком: " + playerOne.getNamePlayer());
-                    return;
-                }
+
+        do {
+            System.out.println(playerOne.getNamePlayer() + " Введи число");
+            playerOne.setHiddenNumberUser(scanner.nextInt());
+            if (playerOne.getHiddenNumberUser() > hiddenNumberComp) {
+                System.out.println(playerOne.getNamePlayer() + " Данное число больше того, что загадал компьютер.");
             }
-            while (playerOne.getHiddenNumberUser() != hiddenNumberComp) {
-                System.out.println("Введите цифры");
-                playerTwo.setHiddenNumberUser(scanner.nextInt());
-                if (playerTwo.getHiddenNumberUser() > hiddenNumberComp) {
-                    System.out.println("Данное число больше того, что загадал компьютер. Ходит игрок " + playerOne.getNamePlayer());
-                    break;
-                } else if (playerTwo.getHiddenNumberUser() < hiddenNumberComp) {
-                    System.out.println("Данное число меньше того, что загадал компьютер. Ходит игрок " + playerOne.getNamePlayer());
-                    break;
-                } else {
-                    System.out.println(" Поздравляю, число угадано Игроком: " + playerTwo.getNamePlayer());
-                    return;
-                }
+            if (playerOne.getHiddenNumberUser() < hiddenNumberComp) {
+                System.out.println(playerOne.getNamePlayer() + " Данное число меньше того, что загадал компьютер.");
             }
-        }
+            if (playerOne.getHiddenNumberUser() == hiddenNumberComp) {
+                System.out.println(" Поздравляю, число угадано Игроком: " + playerOne.getNamePlayer());
+                break;
+            }
+            System.out.println(playerTwo.getNamePlayer() + " Введи число");
+            playerTwo.setHiddenNumberUser(scanner.nextInt());
+            if (playerTwo.getHiddenNumberUser() > hiddenNumberComp) {
+                System.out.println(playerTwo.getNamePlayer() + " Данное число больше того, что загадал компьютер.");
+            }
+            if (playerTwo.getHiddenNumberUser() < hiddenNumberComp) {
+                System.out.println(playerTwo.getNamePlayer() + " Данное число меньше того, что загадал компьютер.");
+            }
+            if (playerTwo.getHiddenNumberUser() == hiddenNumberComp) {
+                System.out.println(" Поздравляю, число угадано Игроком: " + playerTwo.getNamePlayer());
+                break;
+            }
+        } while (playerOne.getHiddenNumberUser() != hiddenNumberComp || playerTwo.getHiddenNumberUser() != hiddenNumberComp);
     }
 }
 

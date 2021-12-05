@@ -9,9 +9,8 @@ public class GuessNumberTest {
             Player playerOne = new Player(scanner.nextLine());
             System.out.println("Введите имя второго игрока");
             Player playerTwo = new Player(scanner.nextLine());
-            // Числа
-            GuessNumber game = new GuessNumber();
-            game.ProgressGame(playerOne, playerTwo);
+            GuessNumber game = new GuessNumber(playerOne, playerTwo);
+            game.start();
             answer = "";
             while (!answer.equals("yes") && !answer.equals("no")) {
                 System.out.println("Хотите продолжить вычисления? [yes/no]");
