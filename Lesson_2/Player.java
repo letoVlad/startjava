@@ -1,20 +1,20 @@
 public class Player {
-    String name;
-    int number;
+    private String name;
+    private int number;
 
     public Player(String name) {
         this.name = name;
     }
 
-    public String getNamePlayer() {
+    public String getName() {
         return name;
     }
 
-    public int getHiddenNumberUser() {
+    public int getNumber() {
         return number;
     }
 
-    public void setHiddenNumberUser(int number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 }
