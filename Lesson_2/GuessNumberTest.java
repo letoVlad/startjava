@@ -12,9 +12,9 @@ public class GuessNumberTest {
             GuessNumber game = new GuessNumber(playerOne, playerTwo);
             game.start();
             do {
-                System.out.println("Хотите продолжить вычисления? [yes/no]");
+                System.out.println("Хотите продолжить игру? [yes/no]");
                 answer = scanner.nextLine();
-            } while ((!answer.equals("yes") && !answer.equals("no")));
+            } while (!answer.equals("yes") && !answer.equals("no"));
         }
     }
 }

@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class Calculator {
-    int numberOne = 0;
-    int numberTwo = 0;
-    char sign = 0;
+    private int numberOne;
+    private numberTwo;
+    private sign;
+    
     public void calculate() {
         switch (sign) {
             case '+':
