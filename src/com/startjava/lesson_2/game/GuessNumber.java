@@ -1,3 +1,5 @@
+package com.startjava.lesson_2.game;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,7 +26,7 @@ public class GuessNumber {
             } else if (playerOne.getNumber() < hiddenNumberComp) {
                 System.out.println(playerOne.getName() + " Данное число меньше того, что загадал компьютер.");
             } else if (playerOne.getNumber() == hiddenNumberComp) {
-                System.out.println(" Поздравляю, число угадано Игроком: " + playerOne.getName());
+                System.out.println(" Поздравляю, число угадано игроком: " + playerOne.getName());
                 break;
             }
 
@@ -35,7 +37,7 @@ public class GuessNumber {
             } else if (playerTwo.getNumber() < hiddenNumberComp) {
                 System.out.println(playerTwo.getName() + " Данное число меньше того, что загадал компьютер.");
             } else if (playerTwo.getNumber() == hiddenNumberComp) {
-                System.out.println(" Поздравляю, число угадано Игроком: " + playerTwo.getName());
+                System.out.println(" Поздравляю, число угадано игроком: " + playerTwo.getName());
                 break;
             }
         } while (true);

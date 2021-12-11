@@ -1,3 +1,5 @@
+package com.startjava.lesson_2.jager;
+
 public class Jager {
     private String modelName;
     private String origin;

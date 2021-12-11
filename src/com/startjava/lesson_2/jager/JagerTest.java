@@ -1,3 +1,5 @@
+package com.startjava.lesson_2.jager;
+
 public class JagerTest {
     public static void main(String[] args) {
         Jager jagerOne = new Jager();
