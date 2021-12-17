@@ -32,7 +32,7 @@ public class Wolf {
         this.weight = weight;
     }
 
-     public int getAge() {
+    public int getAge() {
         return age;
     }
 
