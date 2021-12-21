@@ -1,4 +1,4 @@
-package com.startjava.lesson_2.jager;
+package com.startjava.lesson_2_3_4.jager;
 
 public class JagerTest {
     public static void main(String[] args) {
