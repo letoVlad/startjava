@@ -5,19 +5,18 @@ import java.util.Scanner;
 public class Calculator {
     public static int calculate() {
         Scanner scanner = new Scanner(System.in);
-        String inputValue = scanner.nextLine();
-        String[] inputExpression = inputValue.split(" ");
-        char sign = inputExpression[1].charAt(0);
-        int numberOne = Integer.parseInt(inputExpression[0]);
-        int numberTwo = Integer.parseInt(inputExpression[2]);
-        int result = 0;
+        String inputValueMath = scanner.nextLine();
+        String[] inputExpressionArray = inputValueMath.split(" ");
+        char sign = inputExpressionArray[1].charAt(0);
+        int numberOne = Integer.parseInt(inputExpressionArray[0]);
+        int numberTwo = Integer.parseInt(inputExpressionArray[2]);
         return switch (sign) {
             case '+' -> Math.addExact(numberTwo, numberTwo);
             case '-' -> Math.subtractExact(numberOne, numberTwo);
-            case '^' -> 0;
-            case '*' -> result = numberOne * numberTwo;
-            case '/' -> result = numberOne / numberTwo;
-            case '%' -> result = (numberOne % numberTwo);
+            case '^' -> (int) Math.pow(numberOne, numberTwo);
+            case '*' -> numberOne * numberTwo;
+            case '/' -> numberOne / numberTwo;
+            case '%' -> numberOne % numberTwo;
             default -> 0;
         };
     }
