@@ -1,15 +1,11 @@
 package com.startjava.lesson_2_3_4.calculator;
 
-import java.util.Scanner;
-
 public class Calculator {
-    public static int calculate() {
-        Scanner scanner = new Scanner(System.in);
-        String inputValueMath = scanner.nextLine();
-        String[] inputExpressionArray = inputValueMath.split(" ");
-        char sign = inputExpressionArray[1].charAt(0);
-        int numberOne = Integer.parseInt(inputExpressionArray[0]);
-        int numberTwo = Integer.parseInt(inputExpressionArray[2]);
+    public static int calculate(String srcExpression) {
+        String[] splittedExpression = srcExpression.split(" ");
+        char sign = splittedExpression[1].charAt(0);
+        int numberOne = Integer.parseInt(splittedExpression[0]);
+        int numberTwo = Integer.parseInt(splittedExpression[2]);
         return switch (sign) {
             case '+' -> Math.addExact(numberTwo, numberTwo);
             case '-' -> Math.subtractExact(numberOne, numberTwo);

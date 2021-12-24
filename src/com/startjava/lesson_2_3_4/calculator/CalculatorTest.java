@@ -9,7 +9,7 @@ public class CalculatorTest {
         String answer = "";
         while (!answer.equals("no")) {
             System.out.print("Введите математическое выражение(через пробел): ");
-            System.out.println(Calculator.calculate());
+            System.out.println(Calculator.calculate(scanner.nextLine()));
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]");
                 answer = scanner.nextLine();
