@@ -17,7 +17,6 @@ public class GuessNumber {
     }
 
     public void start() {
-        System.out.println("Подсказка: Число компьютера = " + hiddenNumber);
         System.out.println("У каждого игрока 10 попыток");
         for (int i = 0; i < 10; i++) {
             if (makeMove(i, playerOne)) {
@@ -33,18 +32,26 @@ public class GuessNumber {
 
     private boolean makeMove(int i, Player player) {
         System.out.println(player.getName() + " Введи число ");
-        player.setAttemp(++i);
+        player.setAttemp(i++);
         player.setNumber(i, scanner.nextInt());
-        if (checkForAttempts(player.getAttemp(), player.getName())) {
+        if (haveAnyAttempts(player.getAttemp(), player.getName())) {
             return true;
         }
-        if (checkNumber(i, player)) {
+        if (compareNumbers(i, player)) {
             return true;
         }
         return false;
     }
 
-    private boolean checkNumber(int i, Player player) {
+    private boolean haveAnyAttempts(int attemp, String namePlayer) {
+        if (attemp == 10) {
+            System.out.println("У " + namePlayer + " закончились попытки");
+            return true;
+        }
+        return false;
+    }
+
+    private boolean compareNumbers(int i, Player player) {
         if (player.getNumber(i) == hiddenNumber) {
             System.out.println("Игрок: " + player.getName() + " угадал число " + player.getNumber(i) + " c " + player.getAttemp() + " попытки");
             return true;
@@ -52,14 +59,6 @@ public class GuessNumber {
             System.out.println(player.getName() + " Данное число больше того, что загадал компьютер.");
         } else if (player.getNumber(i) < hiddenNumber) {
             System.out.println(player.getName() + " Данное число меньше того, что загадал компьютер.");
-        }
-        return false;
-    }
-
-    private boolean checkForAttempts(int attemp, String namePlayer) {
-        if (attemp == 10) {
-            System.out.println("У " + namePlayer + " закончились попытки");
-            return true;
         }
         return false;
     }

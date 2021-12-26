@@ -27,8 +27,8 @@ public class Player {
         return countAttempts;
     }
 
-    public void setAttemp(int attempPlayer) {
-        this.countAttempts = ++attempPlayer;
+    public void setAttemp(int attemp) {
+        this.countAttempts = ++attemp;
     }
 
     public int[] getNumbersCopy() {
