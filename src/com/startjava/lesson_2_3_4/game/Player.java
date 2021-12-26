@@ -4,32 +4,8 @@ import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int[] number = new int[10];
-    private int attempPlayer;
-
-    public void PrintAttempts() {
-        System.out.print("Названные игроком " + name + " числа:");
-        for (int nums : Arrays.copyOf(number, attempPlayer)) {
-            System.out.print(nums + " ");
-        }
-        System.out.println(" ");
-    }
-
-    public int getAttempPlayer() {
-        return attempPlayer;
-    }
-
-    public void setAttempPlayer(int attempPlayer) {
-        this.attempPlayer = ++attempPlayer;
-    }
-
-    public int getNumber(int i) {
-        return number[i];
-    }
-
-    public void setNumber(int index, int value) {
-        number[index] = value;
-    }
+    private int[] numbers = new int[10];
+    private int countAttempts;
 
     public Player(String name) {
         this.name = name;
@@ -37,5 +13,25 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+
+    public int getAttempPlayer() {
+        return countAttempts;
+    }
+
+    public void setAttempPlayer(int attempPlayer) {
+        this.countAttempts = ++attempPlayer;
+    }
+
+    public int[] getNumbersCopy() {
+        return Arrays.copyOf(numbers, countAttempts);
+    }
+
+    public int getNumber(int i) {
+        return numbers[i];
+    }
+
+    public void setNumber(int index, int value) {
+        numbers[index] = value;
     }
 }
