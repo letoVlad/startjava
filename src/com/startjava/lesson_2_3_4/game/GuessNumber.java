@@ -27,32 +27,31 @@ public class GuessNumber {
                 break;
             }
         }
-        PrintAttempts(playerOne);
-        PrintAttempts(playerTwo);
+        printAttempts(playerOne);
+        printAttempts(playerTwo);
     }
 
     private boolean makeMove(int i, Player player) {
         System.out.println(player.getName() + " Введи число ");
+        player.setAttemp(++i);
         player.setNumber(i, scanner.nextInt());
-        if (checkForAttempts(player.getAttempPlayer(), player.getName())) {
+        if (checkForAttempts(player.getAttemp(), player.getName())) {
             return true;
         }
-        if (numberCheck(i, player)) {
+        if (checkNumber(i, player)) {
             return true;
         }
         return false;
     }
 
-    private boolean numberCheck(int i, Player player) {
-        if (player.getNumber(i) > hiddenNumber) {
+    private boolean checkNumber(int i, Player player) {
+        if (player.getNumber(i) == hiddenNumber) {
+            System.out.println("Игрок: " + player.getName() + " угадал число " + player.getNumber(i) + " c " + player.getAttemp() + " попытки");
+            return true;
+        } else if (player.getNumber(i) > hiddenNumber) {
             System.out.println(player.getName() + " Данное число больше того, что загадал компьютер.");
-            player.setAttempPlayer(++i);
         } else if (player.getNumber(i) < hiddenNumber) {
             System.out.println(player.getName() + " Данное число меньше того, что загадал компьютер.");
-            player.setAttempPlayer(++i);
-        } else if (player.getNumber(i) == hiddenNumber) {
-            System.out.println("Игрок: " + player.getName() + " угадал число " + player.getNumber(i) + " c " + player.getAttempPlayer() + " попытки");
-            return true;
         }
         return false;
     }
@@ -65,10 +64,10 @@ public class GuessNumber {
         return false;
     }
 
-    private void PrintAttempts(Player player) {
+    private void printAttempts(Player player) {
         System.out.print("Названные игроком " + player.getName() + " числа:");
-        for (int nums : player.getNumbersCopy()) {
-            System.out.print(nums + " ");
+        for (int num : player.getNumbersCopy()) {
+            System.out.print(num + " ");
         }
         System.out.println(" ");
     }

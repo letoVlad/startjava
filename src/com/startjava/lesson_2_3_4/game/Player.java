@@ -15,23 +15,23 @@ public class Player {
         return name;
     }
 
-    public int getAttempPlayer() {
-        return countAttempts;
-    }
-
-    public void setAttempPlayer(int attempPlayer) {
-        this.countAttempts = ++attempPlayer;
-    }
-
-    public int[] getNumbersCopy() {
-        return Arrays.copyOf(numbers, countAttempts);
+    public void setNumber(int index, int number) {
+        numbers[index] = number;
     }
 
     public int getNumber(int i) {
         return numbers[i];
     }
 
-    public void setNumber(int index, int value) {
-        numbers[index] = value;
+    public int getAttemp() {
+        return countAttempts;
+    }
+
+    public void setAttemp(int attempPlayer) {
+        this.countAttempts = ++attempPlayer;
+    }
+
+    public int[] getNumbersCopy() {
+        return Arrays.copyOf(numbers, countAttempts);
     }
 }
